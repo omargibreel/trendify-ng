@@ -10,10 +10,10 @@ import { initFlowbite } from 'flowbite';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent implements OnInit {
-  constructor(private FlowbiteService: FlowbiteService) {}
+  constructor(private flowbiteService: FlowbiteService) {}
   @Input() isLogin: boolean = false;
   ngOnInit(): void {
-    this.FlowbiteService.loadFlowbite((flowbite) => {
+    this.flowbiteService.loadFlowbite((flowbite) => {
       initFlowbite();
     });
   }
